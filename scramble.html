@@ -21,16 +21,19 @@
                 console.log(randomChoice);
                 console.log(randomWord);
 
-
-
             // Grab the corresponding scrambled word from the SCRAMBLED array
             var scrambledWord = SCRAMBLED[randomChoice];
                 console.log(scrambledWord)
 
             // prompt the user to guess the original word when given the scrambled word
-
+            window.alert ("Can you unscramble this word? " + scrambledWord);
             // If the user guesses wrong, tell them they were wrong and the right word.
-            
+            var guess = prompt("What's your guess? ");
+            if (guess !== randomWord) {
+                    alert("sorry, the right word is " + randomWord);
+            } else {
+                    alert("well done! ");
+            }
             // If the user guesses the correct word, congratulate them.
 
             playing = confirm("Press OK To keep playing or Cancel to quit");
