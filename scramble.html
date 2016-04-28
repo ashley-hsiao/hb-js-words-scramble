@@ -29,13 +29,17 @@
             // window.alert ("Can you unscramble this word? " + scrambledWord);
             // If the user guesses wrong, tell them they were wrong and the right word.
             var guess = prompt("Can you unscramble this word? " + scrambledWord);
+            // removing whitespace from both ends of the string and making guess lower case
+            guess=(guess.trim());
+            guess=(guess.toLowerCase());
+            console.log(guess);
+
             if (guess !== randomWord) {
                     alert("sorry, the right word is " + randomWord);
             } else {
                     alert("well done! ");
             }
             // If the user guesses the correct word, congratulate them.
-
             playing = confirm("Press OK To keep playing or Cancel to quit");
 
             // What does confirm() return?
